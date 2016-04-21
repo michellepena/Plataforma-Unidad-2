@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.myapp.user.cuentaclicks.MainActivity"
+    tools:showIn="@layout/activity_main"
+    >
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Evento OnClick"
+    android:textSize="20dp"
+    android:id="@+id/tex1"
+
+    />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/onClick"
+        android:layout_below="@+id/tex1"
+        android:text="Pulsa para incrementar"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Evento OnLong"
+        android:textSize="20dp"
+        android:id="@+id/tex2"
+        android:layout_below="@+id/onClick"
+        />
+    <LinearLayout
+        android:id="@+id/id_visualizacion"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/tex2"       >
+
+        <TextView
+            android:id="@+id/id_contador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btn_Pulsar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:longClickable="true"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/id_visualizacion">
+
+        <TextView
+            android:id="@+id/id_mensaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pulsa para incrementar" />
+
+        <TextView
+            android:id="@+id/id_mensaje_mantener"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manten presionado para reiniciar"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Evento OnFocus"
+        android:textSize="20dp"
+        android:id="@+id/tex3"
+        android:layout_below="@+id/btn_Pulsar"
+        />
+    <EditText
+        android:id="@+id/campo_descuento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:inputType="numberDecimal"
+        android:layout_alignBottom="@+id/icono_descuento"
+        android:layout_toRightOf="@+id/icono_descuento"
+        android:layout_toEndOf="@+id/icono_descuento" />
+
+    <ImageView
+        android:id="@+id/icono_descuento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/tex3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="15sp"
+        android:id="@+id/texto1"
+        android:layout_below="@+id/icono_descuento"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Evento OnKey"
+        android:textSize="20sp"
+        android:id="@+id/tex4"
+        android:layout_below="@+id/texto1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tex4"
+        android:layout_centerHorizontal="true"
+        android:ems="20"
+        android:inputType="textPersonName"
+        ><requestFocus />
+    </EditText>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="15dp"
+        android:id="@+id/texto"
+        android:layout_below="@+id/nombre"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Evento OnTouch"
+        android:textSize="20dp"
+        android:id="@+id/tex5"
+        android:layout_below="@+id/texto"
+        />
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ejemplo "
+        android:layout_below="@+id/tex5"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="15sp"
+        android:id="@+id/texto3"
+        android:layout_below="@+id/tvText"
+        />
+
+</RelativeLayout>
